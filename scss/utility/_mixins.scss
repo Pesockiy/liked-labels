@@ -3,3 +3,26 @@
 @mixin card() {
     border: 1px solid #000;
 }
+
+@mixin mainButton($font-side: 18px,$color:$mainColor,$minwidth: 285px,$padding: 0.56em,$bsh: 0 .4em  .3em lighten(rgba($color,.4),20)) {
+    min-width: $minwidth;
+    padding: $padding;
+    font-size: $font-side;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $color;
+    border-radius: 5em;
+    color: #fff;
+    box-shadow: $bsh;
+    cursor: pointer;
+    transition: background-color .3s, box-shadow .3s;
+    &:hover {
+        background-color: darken($color,10);
+        box-shadow: 0 .1em  .3em darken(rgba($color,.4),20);
+    }
+}
+
+@mixin boxShadow( $sizes: 0px 6px 7px, $col: rgba(0, 0, 0, 0.15)) {
+    box-shadow: $sizes $col;
+}

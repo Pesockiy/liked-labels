@@ -1,0 +1,49 @@
+.header {
+    background-color: $lightGreyColor;
+    @include boxShadow();
+    &__inner {
+        padding: 22px 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-right: auto;
+        margin-left: 6.2%;
+    }
+    &__nav-list {
+        display: inline-flex;
+        list-style-type: none;
+    }
+    &__right {
+        margin-left: 5.7%;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.nav {
+    &__list-item {
+        flex-shrink: 0;
+    }
+    &__list-item {
+        &:not(:last-of-type) {
+            margin-right: 3%;
+        }
+    }
+    &__link {
+        padding: 0.5em;
+        color: #000;
+        text-decoration: none;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 15px;
+            height: 7px;
+            background: url("#{$path}arrow-bottom.svg") no-repeat center;
+        }
+    }
+}

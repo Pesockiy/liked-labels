@@ -1,6 +1,39 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     width: 100%;
+    max-width: 1290px;
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
+}
+
+body {
+}
+
+.hamburger {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    border: none;
+    background: none;
+    cursor: pointer;
+    &__line {
+        width: 100%;
+        height: 2px;
+        background-color: $greyColor;
+        transition: background-color .3s;
+    }
+    &:hover .hamburger__line {
+        background-color: lighten($greyColor, 30)  
+    }
 }
