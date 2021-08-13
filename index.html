@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <title>Likets Labels</title>
 </head>
@@ -12,35 +13,104 @@
 <body>
     <header class="header">
         <div class="container header__inner">
-            <button class="hamburger">
-                <div class="hamburger__line"></div>
-                <div class="hamburger__line"></div>
-                <div class="hamburger__line"></div>
-            </button>
-            <a href="#" class="logo header__logo">
-                <img src="./img/logo.svg" class="logo__img" alt="logo">
-            </a>
+            <div class="header__left">
+                <button class="hamburger">
+                    <div class="hamburger__line"></div>
+                    <div class="hamburger__line"></div>
+                    <div class="hamburger__line"></div>
+                </button>
+                <a href="#" class="logo header__logo">
+                    <img src="./img/logo.svg" class="logo__img" alt="logo">
+                </a>
+                <ul class="nav__list nav__list--inner" id="hamburgerNav">
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link-inner">Наборы</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link-inner">Наклейки</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link-inner">Вопросы и ответы</a>
+                    </li>
+                    <li class="nav__list-item">
+                        <a href="#" class="nav__link-inner">Доставка</a>
+                    </li>
+                </ul>
+            </div>
             <nav class="nav header__nav">
                 <ul class="nav__list header__nav-list">
                     <li class="nav__list-item">
                         <a href="#" class="nav__link">
                             Все продукты
                         </a>
+                        <ul class="nav__list nav__list--inner">
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner"></a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner"></a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner"></a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner"></a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner"></a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav__list-item">
                         <a href="#" class="nav__link">
                             Наборы
                         </a>
+                        <ul class="nav__list nav__list--inner">
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Минимальный набор</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Основной набор</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Набор этикеток для предметов</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav__list-item">
                         <a href="#" class="nav__link">
                             Этикетки
                         </a>
+                        <ul class="nav__list nav__list--inner">
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Наборы этикеток</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Именные этикетки</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Этикетки для одежды</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Этиктеки для обуви</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Бирки для багажа</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav__list-item">
                         <a href="#" class="nav__link">
                             Наклейки на стену
                         </a>
+                        <ul class="nav__list nav__list--inner">
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Наклейки на стену</a>
+                            </li>
+                            <li class="nav__list-item">
+                                <a href="#" class="nav__link-inner">Магниты</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -51,12 +121,423 @@
                 <a href="#" class="user-basket">
                     <img src="./img/busket-icon.svg" class="user-basket__ico" alt="">
                 </a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                  </svg>
             </div>
         </div>
     </header>
+    </main>
+    <div class="top-banner owl-carousel">
+        <section class="section top-banner__item" style="background-image: url('./img/bannertopbg.jpg');">
+            <div class="top-banner__item-inner">
+                <h1 class="top-banner__ttl main-ttl">Лучшие наклейки и
+                    стикеры для всего</h1>
+                <a href="#" class="main-link top-banner__link">в магазин</a>
+            </div>
+        </section>
+        <section class="section top-banner__item" style="background-image: url('./img/bannertopbg.jpg');">
+            <div class="top-banner__item-inner">
+                <h1 class="top-banner__ttl main-ttl">Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всегоЛучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всегоЛучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всегоЛучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего Лучшие наклейки и
+                    стикеры для всего</h1>
+                <a href="#" class="main-link top-banner__link">в магазин</a>
+            </div>
+        </section>
+        <section class="section top-banner__item" style="background-image: url('./img/bannertopbg.jpg');">
+            <div class="top-banner__item-inner">
+                <h1 class="top-banner__ttl main-ttl">Лучшие</h1>
+                <a href="#" class="main-link top-banner__link">в магазин</a>
+            </div>
+        </section>
+    </div>
+    <section class="section our-offer" id="ourOffer">
+        <div class="container">
+            <h1 class="main-ttl">Наши предложения</h1>
+            <div class="our-offer__inner">
+                <div class="goods goods--main">
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 4.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">Базовый набор</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 5.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">Все наборы</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 6.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">Этикетки на одежду</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 4.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">Этикетки</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 5.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">Наклейки на стену</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 6.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">ШКольный набор</h4>
+                        </div>
+                    </a>
+                </div>
+                <a href="#" class="show-more">Смотреть больше</a>
+            </div>
+        </div>
+    </section>
+    <section class="section why-we">
+        <h1 class="main-ttl">Почему мы?</h1>
+        <div class="why-we__inner">
+            <div class="why-we__item">
+                <img src="./img/Laundry_icon.svg" class="why-we__img" alt="">
+                <div class="why-we__ttl">Не пропадает после стирки</div>
+            </div>
+            <div class="why-we__item">
+                <img src="./img/Easy_icon.svg" class="why-we__img" alt="">
+                <div class="why-we__ttl">Не пропадает после стирки</div>
+            </div>
+            <div class="why-we__item">
+                <img src="./img/Star_icon.svg" class="why-we__img" alt="">
+                <div class="why-we__ttl">Не пропадает после стирки</div>
+            </div>
+            <div class="why-we__item">
+                <img src="./img/Delivery_icon.svg" class="why-we__img" alt="">
+                <div class="why-we__ttl">Не пропадает после стирки</div>
+            </div>
+            <div class="why-we__item">
+                <img src="./img/Parners_icon.svg" class="why-we__img" alt="">
+                <div class="why-we__ttl">Не пропадает после стирки</div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section best-offer" id="bestOffer">
+        <div class="container">
+            <h1 class="main-ttl">Почему мы?</h1>
+            <div class="best-offer__inner">
+                <div class="goods goods--best">
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 8 (2).jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">ШКольный набор</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 9.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">ШКольный набор</h4>
+                        </div>
+                    </a>
+                    <a href="#" class="goods__item">
+                        <div class="goods__item-top">
+                            <img src="./img/Rectangle 10.jpg" alt="" class="img-full">
+                        </div>
+                        <div class="goods__item-b">
+                            <h4 class="goods__item-ttl">ШКольный набор</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section main-banner">
+        <div class="container">
+            <div class="main-banner__inner">
+                <h1 class="main-ttl main-banner__ttl">Подпишись и получи <span class="text-accent">скидку 10%</span></h1>
+                <form action="" class="form main-banner__form">
+                    <input type="email" placeholder="E-mail" class="form__input form__input--text">
+                    <input type="submit" value="Подписаться" class="form__input form__input--button">
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="section about">
+        <div class="container">
+            <h1 class="about__ttl main-ttl">О нас</h1>
+            <div class="about__inner">
+                <div class="about__left">
+                    <h2 class="about__sub-ttl">Likets Labels</h2>
+                    <p class="about__text">
+                        The more we drive the car the better they seem to operate. No noise, just stopping power! Quis
+                        autem
+                        vel
+                        eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+                        illum
+                        qui
+                        dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate verit qui in ea
+                        voluptate
+                        vele.Phasellus rhoncus a dui quis elemen turn. In non feugiat massa.
+                        Proin luctus, ligula pharetra quam. Suspendisse dapibus vestibulum justo sed rhoncus. Cras
+                        vehicula
+                        quam
+                        sem, sed ornare rutrumeu. Quisque porta magna erat, eu feugiat felis finibus.
+                    </p>
+                </div>
+                <div class="about__right">
+                    <h2 class="about__sub-ttl">Контакты</h2>
+                    <ul class="contact-list">
+                        <li class="contact-list__item contact-list__item--tel">
+                            <a href="tel:+2734662455198" class="reset-link">
+                                +27 34 66 2455-198</a>
+                            <a href="tel:+2734662455198" class="reset-link">
+                                +27 34 66 2455-198</a>
+                        </li>
+                        <li class="contact-list__item contact-list__item--address">
+                            <a href="#" class="reset-link">ул. Lipsum 00 Днепр, Украина</a>
+                        </li>
+                        <li class="contact-list__item contact-list__item--mail">
+                            <a href="mailto:support@chromium.com" class="reset-link">support@chromium.com</a>
+                        </li>
+                        <li class="contact-list__item contact-list__item--info">
+                            <a href="mailto:info@chromium.com" class="reset-link">info@chromium.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="review-slider-wrap">
+        <section class="section review-slider owl-carousel">
+            <div class="review-slider__item">
+                <h1 class="main-ttl">Наши отзывы</h1>
+                <div class="review">
+                    <div class="review__rating rating">
+                        <span class="rating__star"></span>
+                    </div>
+                    <div class="review__comment">
+                        <blockquote class="review__quote">“Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book.”“Lorem Ipsum
+                            has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book.”</blockquote>
+                        <cite class="review__cite"> — Lorem Ipsum</cite>
+                    </div>
+                </div>
+            </div>
+            <div class="review-slider__item">
+                <h1 class="main-ttl">Наши отзывы</h1>
+                <div class="review">
+                    <div class="review__rating rating">
+                        <span class="rating__star"></span>
+                    </div>
+                    <div class="review__comment">
+                        <blockquote class="review__quote">“Lorem Ipsum has been the industry's standard dummy text ever
+                            since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book.”</blockquote>
+                        <cite class="review__cite"> — Lorem Ipsum</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="section delivery">
+        <div class="container">
+            <h1 class="main-ttl">Оплата и доставка</h1>
+            <div class="delivery__inner">
+                <div class="delivery__item"><img src="./img/1280px-LIQPAY 1.png" alt=""
+                        class="delivery__img img-adaptive"></div>
+                <div class="delivery__item"><img src="./img/Nova_Poshta_2014_logo 1.png" alt=""
+                        class="delivery__img img-adaptive"></div>
+                <div class="delivery__item"><img src="./img/1200px-Ukrposhta-ua 1.png" alt=""
+                        class="delivery__img img-adaptive"></div>
+            </div>
+        </div>
+    </section>
+    <section class="section main-questions">
+        <div class="container">
+            <h1 class="main-ttl">Часто задаваемые вопросы</h1>
+            <div class="main-questions__inner">
+                <div class="b-collapse main-questions__item">
+                    <div class="b-collapse__header main-questions__item-header">
+                        <h3 class="b-collapse__ttl b-collapse__ttl--accent">Likets Labels</h3>
+                    </div>
+                    <div class="b-collapse__body main-questions__item-body">
+                        <div class="b-collapse__text">The more we drive the car the better they seem to operate. No
+                            noise,
+                            just stopping power! Quis autem
+                            vel eum ...</div>
+                    </div>
+                </div>
+                <div class="b-collapse main-questions__item">
+                    <div class="b-collapse__header main-questions__item-header">
+                        <h3 class="b-collapse__ttl b-collapse__ttl--accent">Likets Labels</h3>
+                    </div>
+                    <div class="b-collapse__body main-questions__item-body">
+                        <div class="b-collapse__text">The more we drive the car the better they seem to operate. No
+                            noise,
+                            just stopping power! Quis autem
+                            vel eum ...</div>
+                    </div>
+                </div>
+                <div class="b-collapse main-questions__item">
+                    <div class="b-collapse__header main-questions__item-header">
+                        <h3 class="b-collapse__ttl b-collapse__ttl--accent">Likets Labels</h3>
+                    </div>
+                    <div class="b-collapse__body main-questions__item-body">
+                        <div class="b-collapse__text">The more we drive the car the better they seem to operate. No
+                            noise,
+                            just stopping power! Quis autem
+                            vel eum ...</div>
+                    </div>
+                </div>
+                <div class="b-collapse main-questions__item">
+                    <div class="b-collapse__header main-questions__item-header">
+                        <h3 class="b-collapse__ttl b-collapse__ttl--accent">Likets Labels</h3>
+                    </div>
+                    <div class="b-collapse__body main-questions__item-body">
+                        <div class="b-collapse__text">The more we drive the car the better they seem to operate. No
+                            noise,
+                            just stopping power! Quis autem
+                            vel eum ...</div>
+                    </div>
+                </div>
+                <div class="b-collapse main-questions__item">
+                    <div class="b-collapse__header main-questions__item-header">
+                        <h3 class="b-collapse__ttl b-collapse__ttl--accent">Likets Labels</h3>
+                    </div>
+                    <div class="b-collapse__body main-questions__item-body">
+                        <div class="b-collapse__text">The more we drive the car the better they seem to operate. No
+                            noise,
+                            just stopping power! Quis autem
+                            vel eum ...</div>
+                    </div>
+                </div>
+                <div class="b-collapse main-questions__item">
+                    <div class="b-collapse__header main-questions__item-header">
+                        <h3 class="b-collapse__ttl b-collapse__ttl--accent">Likets Labels</h3>
+                    </div>
+                    <div class="b-collapse__body main-questions__item-body">
+                        <div class="b-collapse__text">The more we drive the car the better they seem to operate. No
+                            noise,
+                            just stopping power! Quis autem
+                            vel eum ...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main">
+        <footer class="footer">
+            <div class="footer__inner">
+                <a href="#" class="logo footer__logo">
+                    <img src="./img/logo.svg" class="logo__img" alt="logo">
+                </a>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <ul class="footer__list-inner">
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__list-item">
+                        <ul class="footer__list-inner">
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__list-item">
+                        <ul class="footer__list-inner">
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__list-item">
+                        <ul class="footer__list-inner">
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner"><a href="#" class="footer__link reset-link">lorem
+                                    ipsum</a></li>
+                            <li class="footer__list-item-inner">
+                                <div class="footer-socials">
+                                    <a href="#" class="footer-social reset-link"><img src="./img/icons8-facebook.svg"
+                                            alt=""></a>
+                                    <a href="#" class="footer-social reset-link"><img src="./img/twitter.svg"
+                                            alt=""></a>
+                                    <a href="#" class="footer-social reset-link"><img src="./img/instagram.svg"
+                                            alt=""></a>
+                                    <a href="#" class="footer-social reset-link"><img src="./img/youtube.svg"
+                                            alt=""></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script src="./js/jquery-3.6.0.slim.min.js.js"></script>
+        <script src="./js/owl.carousel.min.js"></script>
+        <script src="./js/index.js"></script>
 </body>
 
 </html>

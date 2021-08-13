@@ -1,21 +1,32 @@
 .header {
+    position: sticky;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    top: 0;
     background-color: $lightGreyColor;
     @include boxShadow();
     &__inner {
-        padding: 22px 0;
+        min-height: 80px;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch;
         justify-content: space-between;
     }
-
+    &__nav {
+        display: flex;
+        align-items: stretch;
+    }
+    &__left {
+        align-items: center;
+        display: flex;
+    }
     &__logo {
         margin-right: auto;
-        margin-left: 6.2%;
+        margin-left: 79px;
     }
     &__nav-list {
         display: inline-flex;
-        list-style-type: none;
     }
     &__right {
         margin-left: 5.7%;
@@ -26,8 +37,29 @@
     }
 }
 .nav {
+    &__list--inner {
+        display: none;
+        position: absolute;
+        padding: 5px 0;
+        min-width: 220px;
+        @include boxShadow();
+        border-top: 4px solid $mainColor;
+        top: 100%;
+        z-index: 3;
+        flex-direction: column;
+        background-color: $lightGreyColor;
+        &.active {
+            display: flex;
+        }
+    }
     &__list-item {
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &:hover .nav__list--inner {
+            display: block;
+        }
     }
     &__list-item {
         &:not(:last-of-type) {
@@ -36,14 +68,35 @@
     }
     &__link {
         padding: 0.5em;
-        color: #000;
-        text-decoration: none;
+        @include resetLink();
+        font-family: $baseFont;
+        color: $lightBlackColor;
         &::after {
             content: "";
             display: inline-block;
             width: 15px;
             height: 7px;
             background: url("#{$path}arrow-bottom.svg") no-repeat center;
+        }
+    }
+    &__link-inner {
+        padding: 0.5em 25px;
+        display: block;
+        // margin-left: -20px;
+        // margin-right: -20px;
+        // width: calc(100% + 40px);
+        width: 100%;
+        flex-shrink: 0;
+        @include resetLink();
+        color: $semiBlackColor;
+        &:hover {
+            background-color: $mainColor;
+            color: #fff;
+        }
+    }
+    &__list--inner {
+        .nav__list-item {
+            margin-right: 0;
         }
     }
 }
