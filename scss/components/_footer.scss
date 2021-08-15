@@ -11,9 +11,10 @@
     &__list {
         display: flex;
         flex-grow: 1;
+        flex-wrap: wrap;
     }
     &__list-item {
-        flex-grow: 1;
+        flex: 1 0 0%;
         margin-bottom: 10px;
     }
     &__list-item:not(:last-of-type) {

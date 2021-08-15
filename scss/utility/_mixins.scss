@@ -1,10 +1,6 @@
 //mixins
 
-@mixin card() {
-    border: 1px solid #000;
-}
-
-@mixin boxShadow($sizes: 0px 6px 7px, $col: rgba(0, 0, 0, 0.15)) {
+    @mixin boxShadow($sizes: 0px 6px 7px, $col: rgba(0, 0, 0, 0.15)) {
     box-shadow: $sizes $col;
 }
 

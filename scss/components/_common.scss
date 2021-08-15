@@ -54,10 +54,23 @@ ul {
 }
 
 .section {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-
+.fz32 {
+    font-size: 32px;
+}
+.fz18 {
+    font-size: 18px;
+}
+.mw900 {
+    @extend %mxAuto;
+    max-width: 900px;
+}
+.mw1000 {
+    @extend %mxAuto;
+    max-width: 1000px;
+}
 .hamburger {
     width: 30px;
     height: 20px;
@@ -216,7 +229,6 @@ ul {
 .about {
     &__inner {
         @extend %mxAuto;
-        max-width: 895px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -225,21 +237,26 @@ ul {
         width: 100%;
         margin-bottom: 40px;
     }
+    &__text {
+        line-height: 1.5;
+    }
     &__sub-ttl {
+        @extend %accentText;
+        font-family: $baseFont;
+        font-weight: $basetBoldFw;
         margin-bottom: 15px;
     }
     &__left,
     &__right {
-        width: calc((100% - 90px) / 2);
-        flex-shrink: 1;
+        flex: 1 0 45%;
+        min-width: 300px;
     }
     &__left + &__right {
-        margin-left: 90px;
+        margin-left: 10%;
     }
-    &__ttl {
-    }
-    &__sub-ttl {
-        @extend %accentText;
+    iframe {
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -442,7 +459,9 @@ ul {
         max-width: 254px;
         min-height: 238px;
         margin: 0 16px 34px;
+        @include transition();
         text-decoration: none;
+        cursor: pointer;
         &:hover .goods__item-ttl {
             color: $mainColor;
         }
@@ -450,15 +469,26 @@ ul {
     &__item-top {
         height: 238px;
     }
+    &__item-b {
+        &::after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+    }
     &__item-ttl {
         @include transition();
         padding: 1em;
-        font-size: 18px;
-        font: $basetBoldFw 18px/1.5 $baseFont;  
+        font: $basetBoldFw 18px/1.5 $baseFont;
     }
     &__price {
         color: $mainColor;
         font: $basetBoldFw 18px/1.5 $baseFont;
+    }
+    &__buy {
+        @extend .reset-link;
+        @include mainButton($font-side: 16px, $padding: 0.5em 1em, $minwidth: 0,$bsh: 0 0.2em 0.3em lighten(rgba($mainColor, 0.4), 20));
+        float: right;
     }
     // модификаторы
     &--main {
@@ -512,6 +542,27 @@ ul {
     &--cards-bordered {
         max-width: 1000px;
     }
+    &--kit {
+        .goods__item {
+            min-height: 269px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .goods__item-ttl {
+            padding: 0.72em 0;
+        }
+        .goods__item-b {
+            padding: 0 0.72em 1em;
+            border: 1px solid $semiBlackColor;
+            border-top: none;
+            border-radius: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .goods__price {
+            font-size: 24px;
+        }
+    }
 }
 
 .rating {
@@ -533,7 +584,7 @@ ul {
     &--text {
         background-image: url(#{$path}banner-3.jpg);
     }
-    &--text &__inner{
+    &--text &__inner {
         max-width: none;
         // flex-wrap: nowrap;
         justify-content: space-between;
@@ -608,11 +659,18 @@ ul {
     min-height: 456px;
     margin-top: 35px;
     margin-bottom: 35px;
+    &:hover {
+        .set:not(:hover) {
+            opacity: 0.3;
+        }
+    }
     .set {
         padding: 50px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        text-decoration: none;
+        @include transition(opacity);
         &__inner {
             max-width: 435px;
             display: flex;
