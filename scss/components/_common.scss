@@ -96,6 +96,25 @@ ul {
 .hamburger ~ .nav__list--inner {
     top: 100%;
 }
+
+.user-basket {
+    position: relative;
+    .btn__counter {
+        @include resetLink;
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        display: flex;
+        justify-content: center;
+        width: 17px;
+        height: 17px;
+        font: $basetBoldFw 12px/19px $baseFont;
+        background-color: $mainColor;
+        border-radius: 50%;
+        color: #fff;
+    }
+}
+
 .main-ttl {
     margin-bottom: 35px;
     font: $secondFontBoldFw 36px/1.22 $secondFont;
@@ -130,7 +149,6 @@ ul {
         background-repeat: no-repeat;
         background-position-y: center;
         background-size: 23px 23px;
-        background-image: url(#{$path}call.png);
         a {
             padding: 5px 5px 5px 0;
         }
@@ -141,6 +159,16 @@ ul {
             margin-top: 10px;
         }
         &--tel {
+            background-image: url(#{$path}call.svg);
+        }
+        &--address {
+            background-image: url(#{$path}location-pin.svg);
+        }
+        &--mail {
+            background-image: url(#{$path}email.svg);
+        }
+        &--info {
+            background-image: url(#{$path}arroba.svg);
         }
     }
 }
@@ -335,7 +363,20 @@ ul {
         background-position: -24px -53px;
     }
 }
-
+.socials {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    &__item:not(:last-of-type) {
+        margin-right: 14px;
+    }
+    &__item img {
+        @include transition();
+    }
+    &__item:hover img {
+        filter: drop-shadow(0 0 0px $mainColor);
+    }
+}
 .main-questions {
     background: url(#{$path}questions.jpg) no-repeat center/cover;
     .b-collapse__ttl {
@@ -473,7 +514,7 @@ ul {
     }
     &__item-b {
         &::after {
-            content: '';
+            content: "";
             clear: both;
             display: block;
         }
@@ -489,7 +530,12 @@ ul {
     }
     &__buy {
         @extend .reset-link;
-        @include mainButton($font-side: 16px, $padding: 0.5em 1em, $minwidth: 0,$bsh: 0 0.2em 0.3em lighten(rgba($mainColor, 0.4), 20));
+        @include mainButton(
+            $font-side: 16px,
+            $padding: 0.5em 1em,
+            $minwidth: 0,
+            $bsh: 0 0.2em 0.3em lighten(rgba($mainColor, 0.4), 20)
+        );
         float: right;
     }
     // модификаторы
@@ -619,9 +665,12 @@ ul {
     }
 }
 
-.logo__img {
-    max-width: 100%;
-    height: auto;
+.logo {
+    width: 169px;
+    &__img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .form {

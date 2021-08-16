@@ -48,7 +48,7 @@
         margin-bottom: -35px;
         border-top: 4px solid $mainColor;
     }
-    .logo__img {
+    .logo {
         width: 100px;
     }
     .fz32 {
@@ -140,7 +140,7 @@
     .nav__link {
         padding-left: 0;
         margin-bottom: 15px;
-        border-bottom: 2px solid $mainColor;
+        // border-bottom: 2px solid $mainColor;
     }
     .nav__link-inner {
         padding-left: 0;
@@ -153,10 +153,29 @@
     .nav__list-item {
         opacity: 0;
         transition: opacity 0s linear;
+        &::after {
+            content: "";
+            height: 2px;
+            width: 0;
+            background-color: #fff;
+        }
     }
     .header__nav.active .nav__list-item {
         opacity: 1;
-        transition: opacity 1s linear;
+    }
+    @for $i from 1 to 10 {
+        $speed: $i / 3;
+        // .header__nav.active .nav__list-item::after {
+        //     @include transition(background-color, #{$i + s}, linear);
+        // }
+        .header__nav.active .nav__list-item:nth-child(#{$speed}) {
+            @include transition(opacity, $speed + s, linear);
+            &::after {
+                width: 100%;
+                background-color: adjust-hue($mainColor, $i * 30);
+                transition: all #{$i * 2 + s};
+            }
+        }
     }
     .header__nav-list .nav__link::after {
         display: none;
