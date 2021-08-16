@@ -2,11 +2,18 @@
 $(document).ready(() => {
     const $btnHamburger = $('.hamburger');
 
-   $('.user-basket').click((event) => {
-    event.preventDefault();
+    $('.user-basket').click((event) => {
+        event.preventDefault();
 
-   });
-   
+    });
+
+
+    if (window.innerWidth <= 758) {
+        const $hamburgerNab = $('#hamburgerNav').clone();
+        $('#hamburgerNav').remove();
+        $('.nav.header__nav').prepend($hamburgerNab);
+    };
+
     $btnHamburger.click((elem, classN = 'active') => {
         event.stopPropagation();
         $btnHamburger.toggleClass(classN);
@@ -17,6 +24,9 @@ $(document).ready(() => {
             $('#hamburgerNav').removeClass(classN);
             $('.header__nav').removeClass(classN);
         });
+        if (window.innerWidth <= 758) {
+            $('body').toggleClass('ov-hidden');
+        };
     });
     // window.addEventListener('click', (event) => {
     //     const e = event.target;
@@ -42,7 +52,7 @@ $(document).ready(() => {
             onChanged: setDots
         });
     };
-    if($('.review-slider')) {
+    if ($('.review-slider')) {
         const setBtns = () => $(".review-slider .owl-nav").removeClass('disabled');
         $('.review-slider').owlCarousel({
             loop: true,

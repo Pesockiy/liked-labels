@@ -43,6 +43,14 @@
     }
 }
 @media screen and (max-width: 768px) {
+    .nav.header__nav.active .nav__list.nav__list--inner.active {
+        padding: 25px;
+        margin-bottom: -35px;
+        border-top: 4px solid $mainColor;
+    }
+    .logo__img {
+        width: 100px;
+    }
     .fz32 {
         font-size: 24px;
     }
@@ -56,7 +64,7 @@
     .about__right {
         margin-bottom: 20px;
     }
-    .about__left+.about__right {
+    .about__left + .about__right {
         margin-left: 0;
     }
     .about iframe {
@@ -88,7 +96,8 @@
         height: 14px;
     }
     .header__nav {
-        display: none;
+        display: block;
+        overflow: hidden;
         position: fixed;
         top: 0;
         left: 0;
@@ -97,35 +106,57 @@
         background: #f4f4f4;
         z-index: 9999;
         margin-top: 0;
-        animation: show 0.5s both alternate;
+        transition: 0.3s;
     }
     .header__nav::before {
         content: "";
-        position: absolute;
+        position: fixed;
         top: 0;
-        left: 100%;
-        width: 10000px;
+        right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.4);
     }
-    .header__nav.active {
-        display: block;
+    .header__nav.active::before {
+        left: 0;
+        z-index: -999;
     }
-    @keyframes show {
-        to {
-            width: 66%;
-        }
+    .header__nav.active {
+        height: 100vh;
+        width: 75%;
+        overflow-y: scroll;
+        touch-action: pan-y;
+    }
+    .header__nav.active .nav__list--inner {
+        margin-bottom: 10px;
+        position: static;
+        display: block;
+        border-top: none;
+        box-shadow: none;
+    }
+    .header__nav.active .nav__list-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav__link {
+        padding-left: 0;
+        margin-bottom: 15px;
+        border-bottom: 2px solid $mainColor;
+    }
+    .nav__link-inner {
+        padding-left: 0;
     }
     .header__nav-list {
         flex-direction: column;
         padding: 25px;
-        opacity: 0;
-        animation: opacity 0.3s 0.3s both;
+        background-color: #f4f4f4;
     }
-    @keyframes opacity {
-        to {
-            opacity: 1;
-        }
+    .nav__list-item {
+        opacity: 0;
+        transition: opacity 0s linear;
+    }
+    .header__nav.active .nav__list-item {
+        opacity: 1;
+        transition: opacity 1s linear;
     }
     .header__nav-list .nav__link::after {
         display: none;

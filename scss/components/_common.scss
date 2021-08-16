@@ -144,7 +144,9 @@ ul {
         }
     }
 }
-
+.ov-hidden {
+    overflow: hidden;
+}
 //top banner - slider
 .top-banner {
     @include boxShadow();
@@ -615,6 +617,11 @@ ul {
     &__link {
         min-width: 232px;
     }
+}
+
+.logo__img {
+    max-width: 100%;
+    height: auto;
 }
 
 .form {
