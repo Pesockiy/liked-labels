@@ -4,9 +4,7 @@ $(document).ready(() => {
 
     $('.user-basket').click((event) => {
         event.preventDefault();
-
     });
-
 
     if (window.innerWidth <= 758) {
         const $hamburgerNab = $('#hamburgerNav').clone();
@@ -23,10 +21,15 @@ $(document).ready(() => {
             $btnHamburger.removeClass(classN);
             $('#hamburgerNav').removeClass(classN);
             $('.header__nav').removeClass(classN);
+            if (window.width() <= 758) {
+                if($btnHamburger.contains(classN)) {
+                    $('body').addClass('ov-hidden');
+                } else {
+                    console.log('sdfdsfsd')
+                    $('body').removeClass('ov-hidden');
+                };
+            };
         });
-        if (window.innerWidth <= 758) {
-            $('body').toggleClass('ov-hidden');
-        };
     });
     // window.addEventListener('click', (event) => {
     //     const e = event.target;
