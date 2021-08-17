@@ -165,9 +165,6 @@
     }
     @for $i from 1 to 10 {
         $speed: $i / 3;
-        // .header__nav.active .nav__list-item::after {
-        //     @include transition(background-color, #{$i + s}, linear);
-        // }
         .header__nav.active .nav__list-item:nth-child(#{$speed}) {
             @include transition(opacity, $speed + s, linear);
             &::after {
