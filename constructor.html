@@ -127,13 +127,88 @@
     <main class="main">
         <div class="container">
             <div class="constructor">
-                <div class="constructor__left"></div>
+                <div class="constructor__left">
+                    <canvas id="canvas" class="constructor__canvas">
+                    </canvas>
+                    <img src="./img/Rectangle 104.jpg" alt="">
+                    <input type="file">
+                    <div class="labels-example">
+                        <div class="labels-example__item">
+                            <img src="./img/Rectangle 8 (2).jpg" alt=""
+                                class="labels-example__img img-adaptive">
+                        </div>
+                        <div class="labels-example__item">
+                            <img src="./img/Rectangle 8 (2).jpg" alt=""
+                                class="labels-example__img img-adaptive">
+                        </div>
+                        <div class="labels-example__item">
+                            <img src="./img/Rectangle 8 (2).jpg" alt=""
+                                class="labels-example__img img-adaptive">
+                        </div>
+                    </div>
+                    <div class="constructor__text-block">
+                        <div class="constructor__switches">
+                            <button class="btn-switch">Details</button>
+                            <button class="btn-switch">Rewiews</button>
+                        </div>
+                        <div class="details">
+                            <ul class="details__list">
+                                <li class="details__item">84 all-purpose adhesive labels for objects (36 minis, 24
+                                    small, 20 medium, 4 big labels)</li>
+                                <li class="details__item">8 shoe labels (4 pairs of shoes)</li>
+                                <li class="details__item">2 small bag tags</li>
+                                <li class="details__item">48 small Iron-On Clothing Labels</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="labels-block">
+
+                        <div class="labels-block__item">
+                            <div class="labels-block__top">
+                                <img src="./img/Group.svg" alt="">
+                            </div>
+                            <div class="labels-block__text">
+                                Washer and dryer
+                            </div>
+                        </div>
+                        <div class="labels-block__item">
+                            <div class="labels-block__top">
+                                <img src="./img/Group (2).svg" alt="">
+                            </div>
+                            <div class="labels-block__text">
+                                Waterproof
+                            </div>
+                        </div>
+                        <div class="labels-block__item">
+                            <div class="labels-block__top">
+                                <img src="./img/Group (1).svg" alt="">
+                            </div>
+                            <div class="labels-block__text">
+                                Waterproof
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="constructor__right">
                     <h2 class="constructor__ttl">Lorem Ipsum</h2>
                     <h3 class="constructor__sub-ttl">12 labels, 4.2 x 4.2 cm</h3>
                     <div class="constructor__content">
                         <div class="constructor__item">
                             <div class="constructor__label">Fill in the fields below</div>
+                            <input type="text" name="constructorSurname" class="constructor__input--surname"
+                                placeholder="Please enter the name, surname or other comment">
+                            <input type="text" name="constructorComment" class="constructor__input--comment"
+                                placeholder="Please enter the contact information (address, telephone number) or other comment">
+                        </div>
+                        <div class="constructor__item">
+                            <div class="constructor__label">Choose the font type</div>
+                            <div class="owl-carousel b-choice">
+                                <div class="b-choice__item"><img src="./img/Delivery_icon.svg" alt=""></div>
+                                <div class="b-choice__item"><img src="./img/Delivery_icon.svg" alt=""></div>
+                                <div class="b-choice__item"><img src="./img/Delivery_icon.svg" alt=""></div>
+                                <div class="b-choice__item"><img src="./img/Delivery_icon.svg" alt=""></div>
+                                <div class="b-choice__item"><img src="./img/Delivery_icon.svg" alt=""></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -212,6 +287,7 @@
     </footer>
     <script src="./js/jquery-3.6.0.slim.min.js.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="./jsPDF-1.3.2/dist/jspdf.min.js"></script>
     <script src="./js/index.js"></script>
     </body>
 

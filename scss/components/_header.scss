@@ -26,6 +26,7 @@
         margin-left: 79px;
     }
     &__nav-list {
+        width: 100%;
         display: inline-flex;
     }
     &__right {
@@ -71,9 +72,10 @@
         @include resetLink();
         font-family: $baseFont;
         color: $lightBlackColor;
-        &::after {
+        &.arrow::after {
             content: "";
             display: inline-block;
+            vertical-align: middle;
             width: 15px;
             height: 7px;
             background: url("#{$path}arrow-bottom.svg") no-repeat center;
