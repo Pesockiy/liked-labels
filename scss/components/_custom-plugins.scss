@@ -1,0 +1,37 @@
+.woocommerce-notices-wrapper {
+    &.fixed {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 999;
+    }
+
+    .woocommerce-message {
+        max-width: 765px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-top-color: transparent;
+        padding: 120px 50px 60px 60px;
+        background-color: #fff;
+
+        &::before {
+            padding: 2px;
+            width: 69px;
+            height: 69px;
+            border-radius: 50%;
+            background: url(#{$path}check.svg) no-repeat center/cover $mainColor;
+            left: 50%;
+            top: 37px;
+            transform: translateX(-50%);
+        }
+    }
+
+    .wc-forward {
+        @include mainButton();
+    }
+}

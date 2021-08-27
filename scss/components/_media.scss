@@ -41,13 +41,13 @@
         margin-left: -0.5em;
     }
     .top-banner .top-banner__item {
-        min-height: 400px;
-    }
-    .top-banner .top-banner__ttl {
-        font-size: 40px;
+        height: 400px;
     }
 }
 @media screen and (max-width: 768px) {
+    .goods {
+        justify-content: center;
+    }
     .nav.header__nav.active .nav__list.nav__list--inner.active {
         padding: 25px;
         margin-bottom: -35px;
@@ -193,12 +193,9 @@
     }
 
     .top-banner .top-banner__item {
-        min-height: 350px;
-        padding-bottom: 20px;
+        height: 350px;
     }
-    .top-banner .top-banner__ttl {
-        font-size: 30px;
-    }
+
     .top-banner .owl-dots {
         bottom: 40px;
     }
@@ -236,9 +233,6 @@
     .page-questions .page-questions__item-header::after {
         right: 20px;
     }
-    .top-banner .top-banner__item-inner {
-        padding-bottom: 0;
-    }
     .top-banner .owl-dots .owl-dot {
         width: 8px;
         height: 8px;
@@ -271,15 +265,7 @@
     }
 
     .top-banner .top-banner__item {
-        min-height: 250px;
-        padding-bottom: 45px;
-    }
-    .top-banner .top-banner__link {
-        margin-top: 10px;
-    }
-    .top-banner .top-banner__ttl {
-        font-size: 24px;
-        margin-bottom: 10px;
+        height: 250px;
     }
     .top-banner .owl-dots {
         bottom: 30px;
@@ -310,10 +296,7 @@
         padding: 15px;
     }
     .top-banner .top-banner__item {
-        min-height: 200px;
-    }
-    .why-we .why-we__item {
-        // margin-left: auto;
+        height: 200px;
     }
     .section {
         padding-top: 15px;
