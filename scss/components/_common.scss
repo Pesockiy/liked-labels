@@ -14,6 +14,7 @@
     padding: 0 15px;
     margin-left: auto;
     margin-right: auto;
+
     &--basket-page {
         max-width: 1100px;
         margin-top: 64px;
@@ -340,7 +341,8 @@ ul {
 
 .labels-example {
     display: flex;
-    &__item + &__item {
+
+    &__item+&__item {
         margin-left: 30px;
     }
 }
@@ -349,6 +351,7 @@ ul {
     display: flex;
     justify-content: space-between;
     background-color: orange;
+
     &__content {
         counter-reset: count;
     }
@@ -358,6 +361,7 @@ ul {
         padding-left: 77px;
         padding-top: 15px;
         margin-bottom: 20px;
+
         &::before {
             position: absolute;
             top: 0;
@@ -369,9 +373,11 @@ ul {
 
         }
     }
+
     &__label {
         margin-bottom: 13px;
     }
+
     &__left {
         max-width: 472px;
         margin-right: 60px;
@@ -427,6 +433,7 @@ ul {
 .review-slider-wrap {
     max-width: 765px;
     @extend %mxAuto;
+
     .main-ttl {
         margin-bottom: 15px;
     }
@@ -749,6 +756,7 @@ ul {
 
     &--cards {
         max-width: 1200px;
+
         .goods__item-b {
             padding: 5px 0;
         }

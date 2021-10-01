@@ -125,6 +125,15 @@ $(document).ready(() => {
         e = event.target;
         $(e).closest('.b-collapse').toggleClass('collapsed').children('.b-collapse__body').slideToggle(200);
     });
+   
+    $('.page-questions__item').click((e) => {
+        e = event.target;
+        [...document.querySelectorAll('.page-questions__item-header')].forEach(elem => {
+            elem.classList.remove('collapsed');
+        });
+        $(e).closest('.b-collapse').toggleClass('collapsed').children('.b-collapse__body').slideToggle(200);
+    });
+
 
     if (document.querySelector('.goods--main')) {
         // let $goodsMain = $('.goods--main');
@@ -152,22 +161,28 @@ $(document).ready(() => {
         showMoreGoods('.goods--cards', 8);
     };
 
-    if(document.querySelector('.woocommerce-message')) {
-        if($('.woocommerce-notices-wrapper').find('.woocommerce-message')) {
+    if (document.querySelector('.woocommerce-message')) {
+        if ($('.woocommerce-notices-wrapper').find('.woocommerce-message')) {
             $('.woocommerce-notices-wrapper').addClass('fixed');
         };
-        $(window).click(function(event) {
-            if(event.target == $('.woocommerce-message')) return;
+        $(window).click(function (event) {
+            if (event.target == $('.woocommerce-message')) return;
             $('.woocommerce-notices-wrapper').hide();
             $('.woocommerce-notices-wrapper').removeClass('fixed');
         });
     };
-    if(document.querySelector('.data-thumb')) {
+    if (document.querySelector('.cart-empty')) {
+        if (document.querySelector('.wc-backward')) {
+            document.querySelector('.woocommerce-info ').style.height = `${document.querySelector('.woocommerce-info ').offsetHeight - document.querySelector('.header').offsetHeight - document.querySelector('.footer').offsetHeight}px`
+            document.querySelector('.cart-empty').appendChild(document.querySelector('.wc-backward'));
+        };
+    };
+    if (document.querySelector('.data-thumb')) {
         let copiedImg = document.querySelector('.data-thumb').cloneNode(true);
-        document.querySelector('.woocommerce-message').insertBefore(copiedImg,'.wc-forward');
+        document.querySelector('.woocommerce-message').insertBefore(copiedImg, '.wc-forward');
         let copiedTTl = document.querySelector('.product_title').cloneNode(true);
-        document.querySelector('.woocommerce-message').insertBefore(copiedTTl,'.wc-forward');
-        
+        document.querySelector('.woocommerce-message').insertBefore(copiedTTl, '.wc-forward');
+
     };
 
     if (document.querySelector('#canvas')) {
